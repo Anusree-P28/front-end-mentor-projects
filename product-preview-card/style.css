@@ -4,34 +4,31 @@
     box-sizing: border-box;
 }
 
-.container {
+body {
     background-color: hsl(30, 38%, 92%);
-    height: 30rem;
-    width: 90%;
-    margin-top: 4rem;
-    margin-left: 3rem;
-    border-radius: 1rem;
-    box-shadow: 1px 1px 0px .5px rgba(0, 0, 0, 0.2);
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
-.product {
+main {
     width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .img {
     border-bottom-left-radius: 1rem;
     border-top-left-radius: 1rem;
     background-image: url("./images/image-product-desktop.jpg");
-    height: 22rem;
+    height: 25rem;
+    max-width: 20rem;
     width: 50rem;
     background-size: cover;
+    aspect-ratio: 1/1;
 }
 
 p {
@@ -41,7 +38,7 @@ p {
 .content-container {
     border-bottom-right-radius: 1rem;
     border-top-right-radius: 1rem;
-    height: 22rem;
+    height: 25rem;
     background-color: hsl(0, 100%, 100%);
 }
 
@@ -49,7 +46,7 @@ p {
     margin-top: 1.5rem;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
-    width: 15rem;
+    width: 16rem;
 }
 
 p.category {
@@ -60,7 +57,7 @@ p.category {
 }
 
 h1.brand {
-    padding-top: .5rem;
+    padding-top: 1rem;
     font-family: Fraunces;
     font-weight: 700;
 }
@@ -69,11 +66,11 @@ p.desc {
     font-family: montserrat;
     font-weight: 500;
     color: hsl(228, 12%, 48%);
-    padding-top: .5rem;
+    padding-top: 1rem;
 }
 
 .price-container {
-    padding-top: .5rem;
+    padding-top: 1rem;
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -93,7 +90,7 @@ p.original-price {
 }
 
 .btn {
-    padding: .5rem;
+    padding: 1rem;
     width: 90%;
     background-color: hsl(158, 36%, 37%);
     color: hsl(0, 100%, 100%);
@@ -119,22 +116,18 @@ p.original-price {
 
 @media(min-width:320px) and (max-width:1000px) {
 
-    .container {
+    body {
         background-color: hsl(30, 38%, 92%);
         width: 100%;
         margin: 0;
         height: 100vh;
-        border-radius: 0;
-        box-shadow: 1px 1px 0px .5px rgba(0, 0, 0, 0.2);
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .product {
+    main {
         width: fit-content;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -144,8 +137,9 @@ p.original-price {
     .img {
         background-image: url(./images/image-product-mobile.jpg);
         width: 22rem;
+        max-width: 25rem;
         border-radius: 0%;
-        height: 15rem;
+        height: 12rem;
         border-top-left-radius: 1rem;
         border-top-right-radius: 1rem;
 
@@ -154,7 +148,7 @@ p.original-price {
     .content-container {
         border-radius: 0rem;
         width: 22rem;
-        height: 20rem;
+        height: 22rem;
         border-bottom-left-radius: 1rem;
         border-bottom-right-radius: 1rem;
     }
@@ -162,5 +156,9 @@ p.original-price {
     .content {
         width: 19rem;
         height: 17rem;
+    }
+
+    .btn{
+        width: 100%;
     }
 }
