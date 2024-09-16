@@ -15,8 +15,7 @@ This is a simple product preview card component built using HTML and CSS. It adj
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL:(https://anusree-p-dev.github.io/front-end-mentor-projects/product-preview-card/)
 
 ### Built with
 
