@@ -2,22 +2,29 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 15px;
     font-family: poppins;
 }
 
 body {
     background-color: hsl(0, 0%, 98%);
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100%;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 section {
-    width: 40%;
+    width: 45%;
     text-align: center;
 }
 
@@ -25,60 +32,65 @@ p {
     font-size: 10px;
     color: hsl(229, 6%, 66%);
 }
-
-h1 {
+.top-heading{
+    font-weight: 200;
+}
+.bold-heading {
+    padding-bottom: 1rem;
     font-weight: 600;
 }
 
-h2 {
-    font-weight: 200;
+h1 {
+   color: hsl(234, 12%, 34%);
 }
 
 .container {
     display: grid;
     margin-top: 3rem;
-    margin-bottom: 3rem;
-    grid-template-columns: 30% 5% 30% 5% 30%;
-    grid-template-rows: 25% 22% 6% 22% 25%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-gap: 1rem;
 }
 
 .box {
-    height: auto;
-    min-height: 10rem;
-    width: 15rem;
-    border-radius: .5rem;
+    height: 10rem;
+    width: auto;
+    max-width: 15rem;
+    border-radius: .4rem;
     background-color: hsl(0, 0%, 98%);
-    box-shadow: 2px 2px .5px .5px rgba(00, 00, 00, 0.2);
+    box-shadow: 0px .5px 0px .5px rgba(00, 00, 00, 0.2);
 }
 
-.box-head {
+.box-heading {
+    color: hsl(234, 12%, 34%);
     font-weight: 400;
+    font-size: 15px
 }
 
 .supervisor {
     grid-column: 1/2;
-    grid-row: 2/5;
+    grid-row: 2/4;
     border-top: 3px solid hsl(180, 62%, 55%);
     padding: 1rem;
 }
 
 .team-builder {
-    grid-column: 3/4;
+    grid-column: 2/3;
     grid-row: 1/3;
     border-top: 3px solid hsl(0, 78%, 62%);
     padding: 1rem;
 }
 
 .calc {
-    grid-column: 5/6;
-    grid-row: 2/5;
+    grid-column: 3/4;
+    grid-row: 2/4;
     border-top: 3px solid hsl(212, 86%, 64%);
     padding: 1rem;
 }
 
 .karma {
-    grid-column: 3/4;
-    grid-row: 4;
+    grid-column: 2/3;
+    grid-row: 3/5;
     border-top: 3px solid hsl(34, 97%, 64%);
     padding: 1rem;
 }
@@ -87,15 +99,15 @@ h2 {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-top: 2.5rem;
+    padding-top: 2rem;
 }
 
 .icon img {
-    width: 2rem;
+    width: 2.5rem;
 }
 
 .attribution {
-    font-size: 10px;
+    font-size: 8px;
     text-align: center;
 }
 
@@ -103,48 +115,48 @@ h2 {
     color: hsl(228, 45%, 44%);
 }
 
-@media (min-width:320px) and (max-width:1000px) {
+@media (max-width:768px) {
+    body {
+        font-size: 12px;
+    }
+
     section {
-        width: 60%;
+        width: 70%;
     }
 
     .container {
         display: grid;
-        grid-template-rows: 22% 6% 22% 6% 22% 6% 22%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 25% 25% 25% 25%;
     }
 
     .box {
         height: auto;
-        min-height: 10rem;
-        border-radius: .5rem;
-        box-shadow: 2px 2px .5px .5px rgba(00, 00, 00, 0.2);
+        min-height: 8rem;
     }
 
     .supervisor {
         grid-column: 1;
         grid-row: 1/2;
-        border-top: 3px solid hsl(180, 62%, 55%);
-        padding: 1rem;
     }
 
     .team-builder {
         grid-column: 1;
-        grid-row: 3/4;
-        border-top: 3px solid hsl(0, 78%, 62%);
-        padding: 1rem;
-    }
-
-    .calc {
-        grid-column: 1;
-        grid-row: 7;
-        border-top: 3px solid hsl(212, 86%, 64%);
-        padding: 1rem;
+        grid-row: 2/3;
     }
 
     .karma {
         grid-column: 1;
-        grid-row: 5/6;
-        border-top: 3px solid hsl(34, 97%, 64%);
-        padding: 1rem;
+        grid-row: 3/4;
     }
+
+    .calc {
+        grid-column: 1;
+        grid-row: 4/5;
+    }
+
+    footer {
+        margin-top: 5rem;
+    }
+
 }
