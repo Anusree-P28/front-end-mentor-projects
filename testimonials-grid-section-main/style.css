@@ -1,0 +1,184 @@
+:root {
+    /* /* primary colors * */
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+
+    /* /* neutral * */
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+
+    /* /* font styles  */
+    --font-size: 13px;
+    --font-family: 'Barlow Semi Condensed', sans-serif;
+    --font-weight1: 500;
+    --font-weight2: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+body {
+    background-color: var(--light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;background-color: aqua;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(250px,auto));
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+        "card1 card1 card2 card5"
+        "card3 card4 card4 card5";
+    gap: 2rem;
+    padding: 2rem;
+    background-color: aquamarine;
+}
+
+.img {
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    grid-area: img;
+}
+
+.quote {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    padding-right: 5rem;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 40px auto;
+    grid-template-rows: 20px 20px auto;
+    grid-template-areas:
+        "img name"
+        "img about"
+        "review review";
+    padding: 2rem;
+    border-radius: 1rem;
+    position: relative;
+    z-index: 1;
+    
+}
+
+.card-1 {
+    background-color: var(--moderate-violet);
+    color: var(--white);
+    grid-area: card1;
+}
+
+.card-2 {
+    background-color: var(--very-dark-grayish-blue);
+    color: var(--light-grayish-blue);
+    grid-area: card2;
+}
+
+.card-3 {
+    background-color: var(--white);
+    color: var(--very-dark-blackish-blue);
+    grid-area: card3;
+}
+
+.card-4 {
+    background-color: var(--very-dark-blackish-blue);
+    color: var(--white);
+    grid-area: card4;
+}
+
+.card-5 {
+    background-color: var(--white);
+    color: var(--very-dark-blackish-blue);
+    grid-area: card5;
+}
+
+#card1-about {
+    color: hsla(0, 0%, 100%, 50%);
+}
+
+#card2-about {
+    color: hsla(210, 46%, 95%, 50%);
+}
+
+#card3-about {
+    color: hsla(219, 29%, 14%, 50%);
+}
+
+#card4-about {
+    color: hsla(0, 0%, 100%, 50%);
+}
+
+#card5-about {
+    color: hsla(219, 29%, 14%, 50%);
+}
+
+#card1-review-para {
+    color: hsla(0, 0%, 100%, 70%);
+}
+
+#card2-review-para {
+    color: hsla(210, 46%, 95%, 70%);
+}
+
+#card3-review-para {
+    color: hsla(219, 29%, 14%, 70%);
+}
+
+#card4-review-para {
+    color: hsla(0, 0%, 100%, 70%);
+}
+
+#card5-review-para {
+    color: hsla(219, 29%, 14%, 70%);
+}
+
+.name {
+    grid-area: name;
+    min-height: 16px;
+    max-height: 20px;
+    min-width: 120px;
+    font-weight: var(--font-weight1);
+}
+
+.about {
+    grid-area: about;
+    font-size: 12px;
+}
+.one-line{
+    padding-bottom: 1rem;
+    font-weight: var(--font-weight2);
+    font-size: 20px;
+}
+.review-container {
+    grid-area: review;
+    padding-top: 0.5rem;
+}
+
+@media (max-width:768px) {
+    section {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas:
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "card5";
+        gap: 2rem;
+        padding: 2rem;       
+    }
+    
+}
