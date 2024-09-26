@@ -1,15 +1,15 @@
 :root {
-    /* /* primary colors * */
+    /* primary colors */
     --moderate-violet: hsl(263, 55%, 52%);
     --very-dark-grayish-blue: hsl(217, 19%, 35%);
     --very-dark-blackish-blue: hsl(219, 29%, 14%);
     --white: hsl(0, 0%, 100%);
 
-    /* /* neutral * */
+    /* neutral */
     --light-gray: hsl(0, 0%, 81%);
     --light-grayish-blue: hsl(210, 46%, 95%);
 
-    /* /* font styles  */
+    /* font styles  */
     --font-size: 13px;
     --font-family: 'Barlow Semi Condensed', sans-serif;
     --font-weight1: 500;
@@ -21,6 +21,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--font-family);
+    font-size: var(--font-size);
 }
 
 body {
@@ -29,49 +30,37 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 100vh;background-color: aqua;
 }
 
-section {
+main {
+    height: 100vh;
+    width: 90%;
+}
+
+.testimonial {
+    margin: 5rem;
     display: grid;
-    grid-template-columns: repeat(4, minmax(250px,auto));
+    grid-template-columns: repeat(4, minmax(10rem, auto));
     grid-template-rows: repeat(2, auto);
     grid-template-areas:
         "card1 card1 card2 card5"
         "card3 card4 card4 card5";
     gap: 2rem;
-    padding: 2rem;
-    background-color: aquamarine;
-}
 
-.img {
-    border-radius: 50%;
-    height: 32px;
-    width: 32px;
-    grid-area: img;
-}
-
-.quote {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
-    padding-right: 5rem;
 }
 
 .card {
     display: grid;
-    grid-template-columns: 40px auto;
-    grid-template-rows: 20px 20px auto;
+    grid-template-columns: 2.5rem auto;
+    grid-template-rows: 1.2rem 1.2rem auto;
     grid-template-areas:
         "img name"
-        "img about"
+        "img title"
         "review review";
     padding: 2rem;
     border-radius: 1rem;
     position: relative;
     z-index: 1;
-    
 }
 
 .card-1 {
@@ -104,23 +93,51 @@ section {
     grid-area: card5;
 }
 
-#card1-about {
+.img {
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    grid-area: img;
+}
+
+.name {
+    grid-area: name;
+    min-height: 1.5rem;
+    max-height: 2rem;
+    min-width: 5rem;
+    font-weight: var(--font-weight1);
+}
+
+.title {
+    grid-area: title;
+    font-size: 12px;
+}
+
+.quote-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    padding-right: 5rem;
+}
+
+#card1-title {
     color: hsla(0, 0%, 100%, 50%);
 }
 
-#card2-about {
+#card2-title {
     color: hsla(210, 46%, 95%, 50%);
 }
 
-#card3-about {
+#card3-title {
     color: hsla(219, 29%, 14%, 50%);
 }
 
-#card4-about {
+#card4-title {
     color: hsla(0, 0%, 100%, 50%);
 }
 
-#card5-about {
+#card5-title {
     color: hsla(219, 29%, 14%, 50%);
 }
 
@@ -144,33 +161,36 @@ section {
     color: hsla(219, 29%, 14%, 70%);
 }
 
-.name {
-    grid-area: name;
-    min-height: 16px;
-    max-height: 20px;
-    min-width: 120px;
-    font-weight: var(--font-weight1);
-}
-
-.about {
-    grid-area: about;
-    font-size: 12px;
-}
-.one-line{
+.main-quote {
     padding-bottom: 1rem;
     font-weight: var(--font-weight2);
-    font-size: 20px;
 }
+
 .review-container {
     grid-area: review;
     padding-top: 0.5rem;
 }
 
-@media (max-width:768px) {
-    section {
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+@media (max-width:870px) {
+    main {
+        height: 100%;
+        width: 100%;
+    }
+
+    .testimonial {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, auto);
+        grid-template-rows: repeat(5, auto);
         grid-template-areas:
             "card1"
             "card2"
@@ -178,7 +198,7 @@ section {
             "card4"
             "card5";
         gap: 2rem;
-        padding: 2rem;       
+        margin: 1rem;
     }
-    
+
 }
