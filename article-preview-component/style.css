@@ -52,8 +52,7 @@ article {
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: auto;
-    min-height: 200px;
+    height: 250px;
     border-top-right-radius: 1rem;
     border-top-left-radius: 1rem;
 }
