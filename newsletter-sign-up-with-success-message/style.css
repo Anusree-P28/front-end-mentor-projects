@@ -1,0 +1,234 @@
+:root {
+    --tomato: hsl(4, 100%, 67%);
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+    --font-size-para: 16px;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 400;
+    /* Regular */
+    src: url('./assets/fonts/Roboto-Regular.ttf') format('truetype');
+    /* TTF format */
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 700;
+    /* Bold */
+    src: url('./assets/fonts/Roboto-Bold.ttf') format('truetype');
+    /* TTF format */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', arial;
+    font-weight: 400;
+    font-size: var(--font-size-para);
+    color: var(--charcoal-grey);
+}
+
+main,
+.newsletter-card,
+.success-msg-container {
+    height: 100vh;
+}
+
+.newsletter-card,
+#email,
+.sub-btn,
+.dismiss-btn {
+    width: 100%;
+}
+
+.newsletter-card {
+    background-color: var(--white);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+        "img"
+        "contents";
+    gap: 2rem;
+    overflow-y: auto;
+}
+
+.card-img {
+    background-image: url(./assets/images/illustration-sign-up-mobile.svg);
+    width: auto;
+    height: auto;
+    min-height: 20rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom-right-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    grid-area: img;
+}
+
+.card-content {
+    grid-area: contents;
+    padding: 1rem 1rem 2rem 1rem;
+}
+
+.card-title,
+.success-msg-container h1 {
+    font-weight: 700;
+    padding-bottom: 1rem;
+    color: var(--dark-slate-grey);
+}
+
+.card-desc,
+.success-msg-container p {
+    padding-bottom: 1rem;
+    line-height: 1.5rem;
+}
+
+.card-list li {
+    position: relative;
+    list-style: none;
+    padding-left: 2.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.card-list li::before {
+    content: url(./assets/images/icon-list.svg);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 2rem;
+    position: relative;
+}
+
+label {
+    padding-bottom: 0.5rem;
+    font-size: 12px;
+}
+
+label span {
+    color: var(--tomato);
+    position: absolute;
+    right: 0;
+}
+
+#email,
+.sub-btn,
+.dismiss-btn {
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+}
+
+#email {
+    border: 0.5px solid var(--grey);
+    outline: none;
+}
+
+.sub-btn,
+.dismiss-btn {
+    background-color: var(--dark-slate-grey);
+    color: var(--white);
+    margin-top: 1rem;
+    border: none;
+}
+
+#email,
+.sub-btn,
+.dismiss-btn {
+    cursor: pointer;
+}
+
+.sub-btn:hover,
+.dismiss-btn:hover {
+    background: linear-gradient(90deg, hsl(355, 100%, 74%), var(--tomato));
+    box-shadow: 0 10px 20px hsl(355, 100%, 74%);
+}
+
+.success-msg-container h1 {
+    padding-top: 2rem;
+    font-size: 3rem;
+}
+
+p span {
+    font-weight: 700;
+}
+
+.hide {
+    display: none;
+}
+
+/* attribute */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* Responsive design for larger screen */
+
+@media screen and (min-width:768px) {
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: var(--dark-slate-grey);
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        width: 60%;
+        min-width: 700px;
+    }
+
+    .newsletter-card {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas: "contents img";
+        padding: 1rem;
+        height: auto;
+        background-color: var(--white);
+        border-radius: 2rem;
+        overflow: unset;
+    }
+
+    .card-img {
+        height: 100%;
+        border-radius: 0.5rem;
+    }
+
+    .card-title {
+        font-size: 3rem;
+        padding-top: 2rem;
+    }
+
+    .success-msg-container {
+        background-color: var(--white);
+        height: auto;
+        width: 55%;
+        padding: 2rem;
+        border-radius: 1.5rem;
+    }
+}
