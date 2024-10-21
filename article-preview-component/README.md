@@ -19,7 +19,7 @@ Users should be able to:
 
 ## Links
 
-- Live Site URL: Live Site URL:(https://anusree-p-dev.github.io/front-end-mentor-projects/article-preview-component/)
+- Live Site URL: Live Site URL:(https://anusree-p28.github.io/front-end-mentor-projects/article-preview-component/)
 
 ## Built with
 
