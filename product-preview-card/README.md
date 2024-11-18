@@ -6,7 +6,6 @@ This is a solution to the [Product preview card component challenge on Frontend 
 - [Overview](#overview)
   - [Links](#links)
   - [Built with](#built-with)
-- [Author](#author)
 
 
 ## Overview
@@ -15,7 +14,7 @@ This is a simple product preview card component built using HTML and CSS. It adj
 
 ### Links
 
-- Live Site URL:(https://anusree-p-dev.github.io/front-end-mentor-projects/product-preview-card/)
+- Live Site URL:(https://anusree-p28.github.io/front-end-mentor-projects/product-preview-card/)
 
 ### Built with
 
@@ -23,7 +22,4 @@ This is a simple product preview card component built using HTML and CSS. It adj
 - CSS
 - Flexbox
 
-## Author
-
-- Frontend Mentor - (https://www.frontendmentor.io/profile/Anusree-P-dev)
 
