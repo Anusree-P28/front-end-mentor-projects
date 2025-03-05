@@ -15,7 +15,7 @@ This is a simple testimonial grid section built using HTML and CSS. It adjusts r
 
 ### Links
 
-- Live Site URL: (https://anusree-p-dev.github.io/front-end-mentor-projects/testimonials-grid-section-main/)
+- Live Site URL: (https://anusree-p28.github.io/front-end-mentor-projects/testimonials-grid-section-main/)
 
 ### Built with
 
