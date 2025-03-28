@@ -200,7 +200,7 @@ main {
     padding: 1rem;
     background-color: var(--white);
     border-radius: 0.5rem;
-    overflow: hidden;
+    word-wrap: break-word;
 }
 
 .link div {
